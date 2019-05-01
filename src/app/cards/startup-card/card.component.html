@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="header">
+        <div class="logo" *ngIf="data.logoLink != ''" [ngStyle]="{'background-image': 'url(' + data.logoLink + ')'}"></div>
+        <div class="logo fallback" *ngIf="data.logoLink === ''"><i class="fas fa-atom"></i></div>
+        <div class="text-container">
+            <h1>{{ data.startupName }}</h1>
+            <p>{{ data.shortPitch }}</p>
+        </div>
+    </div>
+    <div class="tabs">
+        <div (click)="changeTab(0)" [ngClass]="{tab: true, active: activeTab === 0}"><i class="fas fa-info-circle"></i> Description</div>
+        <div (click)="changeTab(1)" [ngClass]="{tab: true, active: activeTab === 1}"><i class="fas fa-briefcase"></i> Looking For</div>
+        <div (click)="changeTab(2)" [ngClass]="{tab: true, active: activeTab === 2}"><i class="fas fa-phone"></i> Contact</div>
+    </div>
+    <div class="tab-content">
+        <div class="content" *ngIf="activeTab === 0">
+            <p>{{ data.description }}</p>
+            <p>{{ data.industry }} • {{ data.companySize }} Employees</p>
+        </div>
+        <div class="content" *ngIf="activeTab === 1">
+            <table>
+                <tr>
+                    <td>{{ data.position1 }}</td>
+                    <td>{{ data.position2 }}</td>
+                </tr>
+                <tr>
+                    <td>{{ data.position3 }}</td>
+                    <td>{{ data.position4 }}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="content" *ngIf="activeTab === 2">
+            <p>Point of Contact: {{ data.pointOfContactName }}</p>
+            <p>Email: {{ data.pointOfContactEmail }}</p>
+        </div>
+    </div>
+</div>

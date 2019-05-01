@@ -1,0 +1,15 @@
+<div class="feed-container">
+    <div class="content-wrapper">
+        <a [href]="staticFeedData[convertViewToString(view)].formLink">
+            <button class="new"><i class="fas fa-plus"></i> New</button>
+        </a>
+        <button class="new" (click)="toggleFilter(staticFeedData[convertViewToString(view)].model)"><i class="fas fa-filter"></i> Filter</button>
+        <div class="header">
+        <div class="primary-icon" [ngStyle]="{'background-color': staticFeedData[convertViewToString(view)].backgroundColor }">
+            <i [ngClass]="['fas', 'fa-' + staticFeedData[convertViewToString(view)].icon]"></i>
+        </div>
+        <h1>{{ staticFeedData[convertViewToString(view)].title }}</h1>
+        </div>
+        <app-results [sheetId]="staticFeedData[convertViewToString(view)].sheetId"  [model]="staticFeedData[convertViewToString(view)].model" [data]="staticFeedData[convertViewToString(view)].data"></app-results>
+    </div>
+</div>

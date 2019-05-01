@@ -1,0 +1,48 @@
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #dadce0;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.card .header {
+    height: 70px;
+}
+
+.card .logo {
+    height: 45px;
+    width: 45px;
+    background-color: #000;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.card .text-container {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+}
+
+.card .text-container h1 {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card .text-container p {
+    margin: 0;
+    color: #4a4a4a;
+}
+
+.card pre {
+    font-size: 0.8rem;
+    font-family: monospace;
+    white-space: normal;
+    width: 100%;
+    text-overflow: ellipsis;
+    color: #827e7e;
+}

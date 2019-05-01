@@ -1,0 +1,56 @@
+<div class="search-box">
+        <h1>Filter results</h1>
+        <hr/>
+        <h2>Filter by</h2>
+        <div class="filter-types" *ngIf="model === 'startup'">
+                <div class="filter" *ngFor="let filter of startupFilters">
+                        <div class="icon">
+                                <i [ngClass]="[filter.icon]"></i>
+                        </div>
+                        {{ filter.title }}
+                </div>
+        </div>
+        <div class="filter-types" *ngIf="model === 'people'">
+                <div class="filter" *ngFor="let filter of peopleFilters">
+                        <div class="icon">
+                                <i [ngClass]="[filter.icon]"></i>
+                        </div>
+                        {{ filter.title }}
+                </div>
+        </div>
+        <hr/>
+        <div class="entry-box" *ngIf="model === 'startup'" >
+                <input type="text" placeholder="Start typing">
+                <button class="search" (click)="addStartupFilter()">Add Filter</button>
+        </div>
+        <div class="entry-box" *ngIf="model === 'people'" >
+                <input type="text" placeholder="Start typing">
+                <button class="search" (click)="addPeopleFilter()">Add Filter</button>
+        </div>
+        <hr/>
+        <div class="active-filters" *ngIf="model === 'startup'">
+                <h2>Active Filters ({{ startupFilterList.length }})</h2>
+                <table cellspacing="0">
+                        <tr *ngFor="let filter of startupFilterList">
+                                <td>{{ filter.filter }}</td>
+                                <td>{{ filter.value }}</td>
+                                <td>✕</td>
+                        </tr>
+                </table>
+        </div>
+        <div class="active-filters" *ngIf="model === 'people'">
+                <h2>Active Filters ({{ peopleFilterList.length }})</h2>
+                <table cellspacing="0">
+                        <tr *ngFor="let filter of peopleFilterList">
+                                <td>{{ filter.filter }}</td>
+                                <td>{{ filter.value }}</td>
+                                <td>✕</td>
+                        </tr>
+                </table>
+        </div>
+        <hr class="no-top"/>
+        <div class="button-row">
+                <button class="save"><i class="fas fa-check"></i> Save</button>
+                <button class="discard" (click)="discardFilter()"><i class="fas fa-times"></i> Discard</button>
+        </div>
+</div>

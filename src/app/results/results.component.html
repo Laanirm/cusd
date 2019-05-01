@@ -1,0 +1,12 @@
+<div class="results-container">
+    <ng-container  *ngIf="model === 'people'">
+        <ng-container *ngFor="let result of data">
+            <app-card-people  *ngIf="result" [data]="result"></app-card-people>
+        </ng-container>
+    </ng-container>
+    <ng-container  *ngIf="model === 'startup'">
+        <ng-container *ngFor="let result of data">
+            <app-card-startup *ngIf="result" [data]="result"></app-card-startup>
+        </ng-container>
+    </ng-container>
+</div>

@@ -1,0 +1,71 @@
+.feed-container {
+    padding: 30px 0;
+}
+
+.header .primary-icon {
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    font-size: 25px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.header p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    color: #5a5a5a;
+    margin-top: 20px;
+}
+
+button.new {
+    background-color: #1d5aca;
+    color: #fff;
+    padding: 10px 20px;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: none;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    margin-left: 10px;
+}
+
+button.new:hover {
+    background-color: rgb(45, 96, 189);
+}
+
+button.new i {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .header .primary-icon {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .header h1 {
+        width: 100%;
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+
+    button.new {
+        float: none;
+        margin: 0 0 20px 0px;
+    }
+}

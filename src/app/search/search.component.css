@@ -1,0 +1,168 @@
+.search-box {
+    height: 500px;
+    width: 400px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+.search-box h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+}
+
+
+.search-box hr {
+    opacity: 0.2;
+    margin: 5px 0;
+}
+
+.search-box h2 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-align: left;
+    color: #8f8f8f;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    margin: 0;
+}
+
+.filter-types {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.filter-types .filter {
+    font-size: 1rem;
+    text-align: center;
+    width: calc(100% / 4);
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.filter-types .filter .icon {
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    background-color: #ececec;
+    color: #5a5a5a;
+    text-align: center;
+    border-radius: 50%;
+    margin: 10px auto;
+}
+
+.filter-types .filter:hover .icon {
+    background-color: #3a3a3a;
+    color: #fff;
+}
+
+.entry-box {
+    padding: 10px 0;
+    font-size: 0;
+}
+
+.entry-box input[type="text"] {
+    width: 70%;
+    padding: 0 10px;
+    border: 1px solid #7e7e7e;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    font-size: 0.85rem;
+    vertical-align: top;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: none;
+}
+
+.entry-box input[type="text"]:focus {
+    outline: none;
+    border: 1px solid #3a3a3a;
+    border-right: none;
+}
+
+.entry-box button.search {
+    width: 30%;
+    font-size: 1rem;
+    background-color: #3a3a3a;
+    color: #fff;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    vertical-align: top;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 0.85rem;
+    border-left: none;
+}
+
+.entry-box button.search:hover {
+    background-color: #222222;
+    cursor: pointer;
+}
+
+.active-filters {
+    height: 135px;
+    overflow-y: auto;
+    margin: 20px 0 0 0;
+}
+
+.active-filters table {
+    width: 100%;
+}
+
+.active-filters table tr td {
+    padding: 5px 0;
+}
+
+.active-filters table tr:not(:last-of-type) td {
+    border-bottom: 1px solid #ececec;
+}
+
+.button-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.button-row button {
+    color: #fff;
+    padding: 5px 20px;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: none;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    width: 130px;
+}
+
+.button-row button i {
+    margin-right: 10px;
+}
+
+.button-row button.save {
+    background-color: #1dca5f;
+}
+
+.button-row button.save:hover {
+    background-color: #1b9249;
+}
+
+.button-row button.discard {
+    background-color: #ca311d;
+    margin-left: 10px;
+}
+
+.button-row button.discard:hover {
+    background-color: #912618;
+}
+
+.search-box hr.no-top {
+    margin: 0 0 20px 0;
+}

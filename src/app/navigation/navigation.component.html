@@ -1,0 +1,12 @@
+<section class="navigation">
+    <div class="content-wrapper">
+        <a href="/"><div class="logo"></div></a>
+        <div class="links">
+            <a (click)="changeView(0)"><div [ngClass]="{link: true}">Home</div></a>
+            <a (click)="changeView(1)"><div [ngClass]="{link: true, selected: view===1}">Startups</div></a>
+            <a (click)="changeView(2)"><div [ngClass]="{link: true, selected: view===2}">People</div></a>
+            <a (click)="changeView(3)"><div [ngClass]="{link: true, selected: view===3}">Resources</div></a>
+        </div>
+    </div>
+</section>
+<div class="spacer"></div>

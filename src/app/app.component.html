@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div [ngClass]="{'overlay': true, 'frozen': startupFilterStatus || peopleFilterStatus}">
+    <div class="black-screen" *ngIf="startupFilterStatus || peopleFilterStatus">
+        <app-search [model]="filterModel"></app-search>
+    </div>
+    <ng-container *ngIf="activeView === 0">
+        <app-home (viewChanged)="changeView($event)"></app-home>
+    </ng-container>
+
+    <ng-container *ngIf="activeView != 0">
+        <app-nav [view]="activeView" (viewChanged)="changeView($event)"></app-nav>
+        <app-feed [view]="activeView"></app-feed>
+    </ng-container>
+
+    <app-footer></app-footer>
+</div>

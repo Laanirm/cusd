@@ -1,0 +1,122 @@
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #dadce0;
+    margin-bottom: 20px;
+    padding: 20px;
+    height: 260px;
+}
+
+.card .header {
+    height: 70px;
+    font-size: 0;
+}
+
+.card .logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card .logo.fallback {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #ececec;
+    color: #a5a5a5;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+}
+
+.card .text-container {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
+    width: calc(100% - 45px);
+    font-size: initial;
+}
+
+.card .text-container h1 {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card .text-container p {
+    margin: 0;
+    color: #4a4a4a;
+}
+
+.card pre {
+    font-size: 0.8rem;
+    font-family: monospace;
+    white-space: normal;
+    width: 100%;
+    text-overflow: ellipsis;
+    color: #827e7e;
+}
+
+.card .tabs {
+    border-bottom: 1px solid #ececec;
+    height: 2rem;
+}
+
+.card .tabs .tab i {
+    padding-right: 5px;
+    color: #a0a0a0;
+}
+
+.card .tabs .tab {
+    display: inline-block;
+    padding: 0 20px 0 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.card .tabs .tab:hover {
+    border-bottom: 1px solid #4a4a4a;
+}
+
+.card .tabs .tab.active {
+    border-bottom: 1px solid #1d5aca;
+}
+
+.card .tabs .tab:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.card .content table {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.card .content table tr td {
+    padding: 5px 10px;
+    width: calc(100% / 4);
+}
+
+.card .tab-content {
+    height: 130px;
+    overflow: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .card .header {
+        margin-bottom: 5px;
+    }
+
+    .card .tabs .tab {
+        font-size: 0.8rem;
+        padding: 0 10px 0 0;
+    }
+
+}
