@@ -7,7 +7,7 @@ import { ViewService } from './../services/view.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
-  title = 'nav';
+  title = 'search';
   @Input() model: String;
 
   startupFilterList:Array<{filter: String, value: String}> = []; 
